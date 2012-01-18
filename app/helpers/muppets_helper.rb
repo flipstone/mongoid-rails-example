@@ -1,0 +1,2 @@
+module MuppetsHelper
+end

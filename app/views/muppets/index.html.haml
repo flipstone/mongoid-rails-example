@@ -1,0 +1,12 @@
+%h1 Muppets
+
+= link_to "New Muppet", new_muppet_path
+
+%ul
+  - @muppets.each do |muppet|
+    %li
+      = muppet
+      = link_to "Show", [muppet]
+      = link_to "Edit", [:edit, muppet]
+      = form_for muppet, method: :delete do
+        = submit_tag "Destroy", confirm: "Really delete #{muppet}?"
