@@ -1,2 +1,5 @@
 = form_for @muppet do |f|
+  %p
+    = f.label :name
+    = f.text_field :name
   = submit_tag "Save Muppet"
